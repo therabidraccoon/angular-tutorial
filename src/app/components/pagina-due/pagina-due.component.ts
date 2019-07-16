@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class PaginaDueComponent implements OnInit {
 
+  title: string;
+
   constructor(private router:Router) { }
 
   ngOnInit() {
+    this.title = "Pagina DUE!!!";
   }
 
   goBack(){

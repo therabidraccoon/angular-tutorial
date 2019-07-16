@@ -1,0 +1,11 @@
+p {
+    font-size: 32px;
+}
+
+#esempio-id {
+    color: blue;
+}
+
+.esempio-class {
+    background-color: green;
+}

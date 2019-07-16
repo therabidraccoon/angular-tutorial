@@ -7,6 +7,8 @@ import { EsempioComponent } from './components/esempio/esempio.component';
 import { HomeComponent } from './components/home/home.component';
 import { PaginaDueComponent } from './components/pagina-due/pagina-due.component';
 import { FiglioComponent } from './components/figlio/figlio.component';
+import { SwapiService } from './services/swapi.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,12 @@ import { FiglioComponent } from './components/figlio/figlio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SwapiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,4 +3,8 @@
 </p>
 <button [routerLink]="'pagina-due'">VAI A PAGINA 2</button>
 <app-esempio></app-esempio>
-<app-figlio [nome]="'CASA BELLA!'" [counter]="counter" (counterUp) = "addValue($event)" ></app-figlio>
+<app-figlio [nome]="'CASA BELLA!'" [counter]="counter" (counterUp)="addValue($event)"></app-figlio>
+
+<button (click)="spamName()"> ALERT SW</button>
+
+<p *ngFor="let p of personaggi">{{p.name}} - {{p.mass}}</p>

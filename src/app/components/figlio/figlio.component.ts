@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-figlio',
@@ -8,10 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FiglioComponent implements OnInit {
 
   @Input() nome: string;
+  @Input() counter: number;
+
+  @Output() counterUp = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  add(value: number){
+    console.log(value);
+    this.counterUp.emit(value);
   }
 
 }

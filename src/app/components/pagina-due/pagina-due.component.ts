@@ -9,15 +9,21 @@ import { Router } from '@angular/router';
 export class PaginaDueComponent implements OnInit {
 
   title: string;
+  contatore: number;
 
   constructor(private router:Router) { }
 
   ngOnInit() {
     this.title = "Pagina DUE!!!";
+    this.contatore = 1;
   }
 
   goBack(){
     this.router.navigate(['']);
+  }
+
+  addValue(num:number){
+    this.contatore += num;
   }
 
 }

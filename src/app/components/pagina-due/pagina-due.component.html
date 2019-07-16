@@ -2,4 +2,4 @@
   pagina-due works!
 </p>
 <button (click)="goBack()">TORNA INDIETRO</button>
-<app-figlio [nome]="title"></app-figlio>
+<app-figlio [nome]="title" [counter]="contatore" (counterUp) = "addValue($event)"></app-figlio>

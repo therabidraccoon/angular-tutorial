@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  counter: number;
+
   constructor() { }
 
   ngOnInit() {
+    this.counter = 10;
+  }
+
+  addValue(num:number){
+    this.counter += num;
   }
 
 }

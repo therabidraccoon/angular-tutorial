@@ -9,6 +9,9 @@ import { PaginaDueComponent } from './components/pagina-due/pagina-due.component
 import { FiglioComponent } from './components/figlio/figlio.component';
 import { SwapiService } from './services/swapi.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EsempioInputComponent } from './components/esempio-input/esempio-input.component';
+import { FormsModule } from '@angular/forms';
+import { TwoWayComponent } from './components/two-way/two-way.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { HttpClientModule } from '@angular/common/http';
     EsempioComponent,
     HomeComponent,
     PaginaDueComponent,
-    FiglioComponent
+    FiglioComponent,
+    EsempioInputComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     SwapiService

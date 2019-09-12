@@ -1,0 +1,7 @@
+<div style="border: 1px solid green">
+  <h1>TWO WAY COMPONENT</h1>
+  <input type="text" [ngModel]="testo" (input)="sendNewText($event)">
+  <p>
+    {{testo}}
+  </p>
+</div>

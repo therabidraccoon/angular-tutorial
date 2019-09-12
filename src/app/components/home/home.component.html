@@ -1,10 +1,14 @@
 <p>
   home works!
 </p>
+<app-esempio-input></app-esempio-input>
+<app-two-way [(testo)]="esempioTwoWay"></app-two-way>
+
 <button [routerLink]="'pagina-due'">VAI A PAGINA 2</button>
 <app-esempio></app-esempio>
 <app-figlio [nome]="'CASA BELLA!'" [counter]="counter" (counterUp)="addValue($event)"></app-figlio>
 
 <button (click)="spamName()"> ALERT SW</button>
+<button (click)="log(esempioTwoWay)"> ALERT TESTO</button>
 
 <p *ngFor="let p of personaggi">{{p.name}} - {{p.mass}}</p>

@@ -9,6 +9,7 @@ import { Personaggio } from 'src/app/model/personaggio';
 })
 export class HomeComponent implements OnInit {
 
+  esempioTwoWay: string;
   counter: number;
   personaggi: Personaggio[];
 
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
     this.counter = 1;
     this.personaggi = [];
     this.showAll();
+    this.esempioTwoWay = 'Start';
   }
 
   addValue(num: number) {
@@ -27,10 +29,10 @@ export class HomeComponent implements OnInit {
   spamName() {
     this.swService.find(this.counter)
       .subscribe((res) => {
-        
+
         let response = res.body as Personaggio;
         console.log(response);
-        alert("NAME: "+response.name+"\n PESO: "+response.mass);
+        alert("NAME: " + response.name + "\n PESO: " + response.mass);
 
       });
   }
@@ -41,6 +43,10 @@ export class HomeComponent implements OnInit {
         let response = res.body.results as Personaggio[];
         this.personaggi = response;
       });
+  }
+
+  log(msg) {
+    console.log(msg);
   }
 
 }
